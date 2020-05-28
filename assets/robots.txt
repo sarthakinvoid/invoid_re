@@ -1,0 +1,2 @@
+# robots.txt for http://www.invoid.co/
+User-agent: *
