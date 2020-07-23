@@ -1,1 +1,51 @@
-var _0x2c66=['email','708323267856','addEventListener','preventDefault','ref','display','none','set','contactForm','getElementById','reset','push','style','phone','https://contactinvoid.firebaseio.com','querySelector','value','name','contactinvoid.firebaseapp.com','messages','database','.alert','submit','AIzaSyBL9tKB1yXj8a2ny4tORqzBb6MkoRQP1lg','contactinvoid','contactinvoid.appspot.com'];(function(_0x2b9099,_0x2c66ce){var _0x45e369=function(_0x747498){while(--_0x747498){_0x2b9099['push'](_0x2b9099['shift']());}};_0x45e369(++_0x2c66ce);}(_0x2c66,0x11b));var _0x45e3=function(_0x2b9099,_0x2c66ce){_0x2b9099=_0x2b9099-0x0;var _0x45e369=_0x2c66[_0x2b9099];return _0x45e369;};var _0x5e3c2e={'apiKey':_0x45e3('0x0'),'authDomain':_0x45e3('0x15'),'databaseURL':_0x45e3('0x11'),'projectId':_0x45e3('0x1'),'storageBucket':_0x45e3('0x2'),'messagingSenderId':_0x45e3('0x4'),'appId':'1:708323267856:web:66ee2ae63850eb4082c195'};firebase['initializeApp'](_0x5e3c2e);var _0x39d5c9=firebase[_0x45e3('0x17')]()[_0x45e3('0x7')](_0x45e3('0x16'));document[_0x45e3('0xc')](_0x45e3('0xb'))[_0x45e3('0x5')](_0x45e3('0x19'),_0x45102f);function _0x45102f(_0x33252b){_0x33252b[_0x45e3('0x6')]();var _0x250851=_0x2a1e94(_0x45e3('0x14'));var _0xe39533=_0x2a1e94(_0x45e3('0x3'));var _0x53edc6=_0x2a1e94(_0x45e3('0x10'));_0x3b9d79(_0x250851,_0xe39533,_0x53edc6);document[_0x45e3('0x12')](_0x45e3('0x18'))['style'][_0x45e3('0x8')]='block';setTimeout(function(){document['querySelector'](_0x45e3('0x18'))[_0x45e3('0xf')]['display']=_0x45e3('0x9');},0xbb8);document[_0x45e3('0xc')](_0x45e3('0xb'))[_0x45e3('0xd')]();}function _0x2a1e94(_0xbc1408){return document[_0x45e3('0xc')](_0xbc1408)[_0x45e3('0x13')];}function _0x3b9d79(_0x4f03a6,_0x3a8ca0,_0x3f4859){var _0x1020f3=_0x39d5c9[_0x45e3('0xe')]();_0x1020f3[_0x45e3('0xa')]({'name':_0x4f03a6,'email':_0x3a8ca0,'phone':_0x3f4859});}
+var _0x3632=['AIzaSyBL9tKB1yXj8a2ny4tORqzBb6MkoRQP1lg','contactinvoid.appspot.com','https://contactinvoid.firebaseio.com','1:708323267856:web:66ee2ae63850eb4082c195','708323267856','contactinvoid','contactinvoid.firebaseapp.com'];(function(_0x1d0e4e,_0x3632d3){var _0x504efe=function(_0x2db978){while(--_0x2db978){_0x1d0e4e['push'](_0x1d0e4e['shift']());}};_0x504efe(++_0x3632d3);}(_0x3632,0xde));var _0x504e=function(_0x1d0e4e,_0x3632d3){_0x1d0e4e=_0x1d0e4e-0x0;var _0x504efe=_0x3632[_0x1d0e4e];return _0x504efe;};var _0x4c2ccf={'_0x3b00e1':_0x504e('0x2'),'_0x4e2ba6':_0x504e('0x1'),'_0x56a6d5':_0x504e('0x4'),'_0x229dae':_0x504e('0x0'),'_0x275ce8':_0x504e('0x3'),'_0x3734bc':_0x504e('0x6'),'_0x3c568f':_0x504e('0x5')};
+// Initialize Firebase
+firebase.initializeApp(config);
+
+  
+  // Reference messages collection
+  var messagesRef = firebase.database().ref('messages');
+  
+  // Listen for form submit
+  document.getElementById('contactForm').addEventListener('submit', submitForm);
+  
+  // Submit form
+  function submitForm(e){
+    e.preventDefault();
+  
+    // Get values
+    var name = getInputVal('name');
+    //var company = getInputVal('company');
+    var email = getInputVal('email');
+    var phone = getInputVal('phone');
+    //var message = getInputVal('message');
+  
+    // Save message
+    saveMessage(name, email, phone);
+  
+    // Show alert
+    document.querySelector('.alert').style.display = 'block';
+  
+    // Hide alert after 3 seconds
+    setTimeout(function(){
+      document.querySelector('.alert').style.display = 'none';
+    },3000);
+  
+    // Clear form
+    document.getElementById('contactForm').reset();
+  }
+  
+  // Function to get get form values
+  function getInputVal(id){
+    return document.getElementById(id).value;
+  }
+  
+  // Save message to firebase
+  function saveMessage(name, email, phone){
+    var newMessageRef = messagesRef.push();
+    newMessageRef.set({
+      name: name,
+      email:email,
+      phone:phone
+    });
+  }
