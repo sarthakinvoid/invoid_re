@@ -35,6 +35,7 @@
       <!--Template Styles CSS-->
       <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+      <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
       <style type="text/css">
          *{
             font-family: 'Lato' !important ;
@@ -473,7 +474,7 @@ filter: grayscale(100%);
                            <br>
                            <!-- <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s"> <span style="font-style:italic" id="counter"></span> verifications done so far</p> -->
                            <div class=" top-banner wow fadeInRight">
-                              <a id="#products" href="contact.html" class="dark-button btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">GeT STARTED</a>
+                              <a id="#products" href="contact.html" class="dark-button btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#" data-toggle="modal"  data-target="#exampleModal">GeT STARTED</a>
                            </div>
                            <div style="height:2.5vh"></div>
                         </div>
@@ -696,7 +697,7 @@ filter: grayscale(100%);
                            </div>
                            <div class="col-md-5">
                               <div class="top-banner wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
-                                 <a id="#products" href="contact.html" class="btn btn-default light-button  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">CONTACT SALES</a>
+                                 <a id="#products" href="contact.html" class="btn btn-default light-button  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;" >CONTACT SALES</a>
                               </div>
                            </div>
                         </div>
@@ -837,6 +838,53 @@ filter: grayscale(100%);
             </div>
          </div>
       </div> -->
+      <!-- <button style="width:1px; background-color: white !important;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+       </button> -->
+       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+           <div class="modal-content">
+             <!-- <div class="modal-header"> -->
+               <!-- <h5 class="modal-title" id="exampleModalLabel">Contact</h5> -->
+               <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button> -->
+             <!-- </div> -->
+             <div class="modal-body">
+               <div>
+                  <div class="wrapper">
+                    <div class="contact">
+                      <!-- <h3>Get started</h3> -->
+                      <img src="./assets/images/KYC DONE.jpg">
+                      <form id="contactForm">
+                        <p>
+                          <label>Name</label>
+                          <input type="text" name="name" id="name" required>
+                        </p>
+                        <p>
+                          <label>Official Email Address</label>
+                          <input type="email" name="email" id="email" required>
+                        </p>
+                        <p>
+                          <label>Phone Number</label>
+                          <input type="text" name="phone" id="phone">
+                        </p>
+                        <p class="full modal-footer">
+                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-default light-button">Submit</button>
+                        </p>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+             </div>
+             <!-- <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Save changes</button>
+             </div> -->
+           </div>
+         </div>
+       </div>       
+      
       <!--#start Our footer Area -->
       <div class="our_partners_area py-70 pt_banner_30">
          <div class="container">
@@ -932,6 +980,7 @@ filter: grayscale(100%);
       <script src="assets/vendors/owl_carousel/owl.carousel.min.js"></script>
       <script src="assets/js/anime.min.js"></script>
             <!-- <script href="assets/js/anime.min.js" rel="stylesheet"> -->
+               <script src="assets/js/contact.js"></script>
 
       <!-- Stellar JS -->
     
