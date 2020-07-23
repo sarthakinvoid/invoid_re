@@ -38,6 +38,7 @@ firebase.initializeApp(config);
     // Hide alert after 3 seconds
     setTimeout(function(){
       document.querySelector('.alert').style.display = 'none';
+      document.querySelector('#closeModal').click();
     },3000);
   
     // Clear form
