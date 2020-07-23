@@ -52,10 +52,14 @@ firebase.initializeApp(config);
   
   // Save message to firebase
   function saveMessage(name, email, phone){
+    var d = new Date();
+    var n = d.toUTCString();
+
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
       name: name,
       email:email,
-      phone:phone
+      phone:phone,
+      dateTime:n
     });
   }
