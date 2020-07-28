@@ -7,7 +7,7 @@
     <style>
         .container{
       display:inline-flex;
-      flex-direction:ROW;
+      flex-direction:column;
       align-items: center;
       /* background-color: ; */
       /* border:1px solid black; */
@@ -15,7 +15,7 @@
       height: 100%;
     }
     .flex-direction{
-      flex-direction:row;
+      /* flex-direction:row; */
     }
     .div1{
       border-right:1px solid black;
@@ -39,7 +39,7 @@
     } */
     body{
       margin:0;
-      background-color: #f0913c;
+      background-color: #ed9100;
     }
     @media only screen and (max-width: 768px) {
       .flex-direction{
@@ -48,7 +48,13 @@
       }
       .dd{
         width:100% !important;
+        display: none;
         /* height:80% !important; */
+      }
+      .dd1{
+        display: block !important;
+        width:100% !important;
+
       }
       span{
         width: 100% !important;
@@ -78,7 +84,8 @@
     <div class="div21">
       <span>Div Two</span> -->
       <div>
-        <img class="dd" STYLE="height:100%" src="assets/images/Scn 1(1).jpg">
+        <img class="dd" STYLE="height:100%" src="assets/images/scn-1-1-1.jpg">
+        <img class="dd1" STYLE="display:none; height:100%" src="assets/images/scn-1-1-.jpg">
       </div>
       <div style="display:flex; flex-direction: column; align-items: center; padding:20px;">
         <span style="line-height:1.3em; font-family:Arial, Helvetica, sans-serif; width:50%; color:white">
