@@ -575,11 +575,11 @@ img{
     margin: 10px 0; 
     color: #364167;
 }
-.bottom-s{
+.bottom-s {
     font-size: 16px;
-    line-height:1.7em;
-    color: #808891;
-    margin-bottom:30px;
+    line-height: 1.7em;
+    color: #5a6066;
+    margin-bottom: 30px;
 }
 .col-4pad{
   padding-right: 0.8rem !important;
@@ -824,22 +824,28 @@ iframe {
   padding-bottom: 0px !important;
 }
 
-.about_h{     font-size: 25px;     color: #90a0b4;     font-weight: 540;
-margin: 30px 0px; } 
+.about_h {
+    font-size: 25px;
+    color: #393f46;
+    font-weight: 540;
+    margin: 30px 0px;
+}
 
 .about_s2 {
-  text-align: left;
+    text-align: left;
     font-size: 25px;
-    color: #90a0b4;
+    color: #393f46;
     line-height: 40px;
     font-weight: 400;
     margin: 30px 0px;
 }
 
-.about_bottom_h{font-size: 20px;     line-height:
-35px;color: #90a0b4; padding-right: 15px; 
+.about_bottom_h {
+    font-size: 20px;
+    line-height: 35px;
+    color: #393f46;
+    padding-right: 15px;
     text-transform: capitalize;
-
 }
 .mt-50{
   margin-top: 50px;
@@ -975,10 +981,10 @@ margin: 30px 0px; }
 .pricingTable .pricing-content ul:after{
     right: 44px;
 }
-.pricingTable .pricing-content ul li{
+.pricingTable .pricing-content ul li {
     font-size: 15px;
     font-weight: 600;
-    color: #90a0b4;
+    color: #393f46;
     padding: 8px 0;
 }
 .pricingTable .pricing-content ul li:last-child{
@@ -1118,10 +1124,10 @@ label{
     padding-right: 25px;
 }
 
-.services-right-text{
+.services-right-text {
     font-size: 22px;
     line-height: 45px;
-    color: #90a0b4;
+    color: #393f46;
     padding-right: 0px;
     text-transform: capitalize;
 }
@@ -1328,14 +1334,14 @@ text-align: left;
   max-width: 100% !important;
   text-align: center !important;
 }
-.testimonial_area .testimonial_carosel .item p  {
-    color: #90a0b4;
+.testimonial_area .testimonial_carosel .item p {
+    color: #393f46;
     max-width: 945px;
     margin: 0 auto;
     font-size: 20px;
     line-height: 35px;
     text-align: center;
-    padding-bottom:36px;
+    padding-bottom: 36px;
 }
 .testimonial_area .testimonial_carosel .item p i {
   color: #555555;
