@@ -27,10 +27,11 @@ firebase.initializeApp(config);
     //var company = getInputVal('company');
     var email = getInputVal('email');
     var phone = getInputVal('phone');
+    var org = getInputVal('org');
     //var message = getInputVal('message');
   
     // Save message
-    saveMessage(name, email, phone);
+      saveMessage(name, email, phone, org);
   
     // Show alert
     document.querySelector('.alert').style.display = 'block';
@@ -51,7 +52,7 @@ firebase.initializeApp(config);
   }
   
   // Save message to firebase
-  function saveMessage(name, email, phone){
+  function saveMessage(name, email, phone, org){
     var d = new Date();
     var n = d.toUTCString();
 
@@ -60,7 +61,8 @@ firebase.initializeApp(config);
       name: name,
       email:email,
       phone:phone,
-      dateTime:n
+      dateTime:n,
+      organization:org
     });
   }
 
